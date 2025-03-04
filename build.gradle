@@ -13,6 +13,8 @@ compileTestJava.options.encoding = "UTF-8"
 
 allure {
     version = '2.20.1'
+    useJUnit5 {'2.20.1'
+    }
 
 }
 
@@ -25,10 +27,10 @@ dependencies {
     testImplementation 'com.codeborne:selenide:6.17.1'
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
-    implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {
     useJUnitPlatform()
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+   // systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
